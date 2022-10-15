@@ -1,20 +1,13 @@
-#include "holberton.h"
-
+ii#include "main.h"
 /**
-* main - Print the word "Holberton"
-*
-* Return: Always 0 (Success)
-*/
-
-int main(void)
+ * _isupper - checks for uppercases.
+ *@c: to prove
+ * Return: return 1 is c is uppercase.
+ */
+int _isupper(int c)
 {
-	int i;
-	char p[] = "Holberton";
-
-	for (i = 0; i < 9; i++)
-		{
-		_putchar(p[i]);
-		}
-		_putchar('\n');
-	return (0);
+	if (c >= 65 && c <= 90)
+		return (1);
+	else
+		return (0);
 }
