@@ -1,15 +1,14 @@
 #include <stdio.h>
 /**
-* main - Prints the alphabet without e and q.
-* Return: Return 0.
+ * main - Print a natural numbers.
+ * Return: Return 0.
 */
 int main(void)
 {
-	char i;
+	int i;
 
-	for (i = 'a' ; i <= 'z'; i++)
-		if (i != 'e' && i != 'q')
-			putchar(i);
-	putchar('\n');
-	return (0);
+	for (i = 0; i <= 9; i++)
+		printf("%i", i);
+printf("\n");
+return (0);
 }
