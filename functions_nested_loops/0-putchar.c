@@ -1,13 +1,18 @@
 #include "main.h"
 /**
- * _isupper - checks for uppercases.
- *@c: to prove
- * Return: return 1 is c is uppercase.
+ * main - Print '_putchar'.
+ * Return: Return 0.
  */
-int _isupper(int c)
+int main(void)
 {
-	if (c >= 65 && c <= 90)
-		return (1);
-	else
-		return (0);
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
+	return (0);
 }
