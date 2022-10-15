@@ -1,24 +1,31 @@
 #include "main.h"
+
 /**
- * more_numbers - Print the numbers from 0 to 14 ten times.
- * Return: void function not have return.
- */
+* more_numbers - print the numbers from 0 to 14 x10.
+* Return: 0 if exited correctly, non-zero otherwise.
+*/
+
 void more_numbers(void)
 {
-	int i, j, k;
+int c;
+int n;
+int d;
 
-	for (i = 0 ; i <= 9; i++)
+for (c = 0; c < 10; c++)
+{
+	for (n = 0; n <= 1; n++)
 	{
-		for (j = 48 ; j <= 49; j++)
+		for (d = 0; d <= 9; d++)
 		{
-			for (k = 48 ; k <= 57; k++)
+			if (n != 0)
 			{
-				if (j > 48 && (j + k) <= 101)
-					_putchar(j);
-				else if (j == 48 || (j + k) <= 101)
-					_putchar(k);
+				if (n > 0 && d <= 4)
+				_putchar(n + '0');
 			}
+			if (n == 0 || d < 5)
+			_putchar(d + '0');
 		}
-		_putchar('\n');
 	}
+	_putchar('\n');
+}
 }
