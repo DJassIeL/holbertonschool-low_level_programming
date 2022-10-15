@@ -1,22 +1,26 @@
-# make -f 100 Makefile executable deletes and recompilation 
-
 CC = gcc
-OBJ = $(SRC:.c=.o)
-NAME = holberton
-SRC = main.c holberton.c
+SRC = main.c school.c
+OBJ = $(SRC:%.c=%.o)
+NAME = school
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
+#.PHONY target prevents 'make' from confusing the phony target with a file name
 .PHONY: all clean oclean fclean re
 
-clean:
-	$(RM) *~ $(NAME)
-
+# Compile the C program
 all: m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-fclean:clean oclean
+# Deletes all Emacs and Vim temporary files along with the executable
+clean:
+	$(RM) *~ $(NAME)
 
+# Deletes the object files
 oclean:
 	$(RM) $(OBJ)
 
+# Deletes all Emacs and Vim temporary files, the executable, and the object files
+fclean: clean oclean
+
+# Forces recompilation of all source files
 re: oclean all
